@@ -1,0 +1,23 @@
+{
+    "clearMocks": true,
+    "coverageReporters": ["text", "cobertura"],
+    "displayName": {
+        "name": "harmony-helper/tests",
+        "color": "greenBright"
+    },
+    "globals": {
+        "navigator": {},
+        "window": {}
+    },
+    "forceExit": true,
+    "moduleFileExtensions": ["js", "json", "jsx", "ts", "tsx"],
+    "preset": "ts-jest",
+    "restoreMocks": true,
+    "setupFiles": ["./src/tests/setup.ts"],
+    "testEnvironment": "node",
+    "testMatch": ["**/**/*.test.ts"],
+    "testTimeout": 60000,
+    "transform": { "^.+\\.(j|t)sx?$": "ts-jest" },
+    "transformIgnorePatterns": ["<rootDir>/node_modules"],
+    "verbose": true
+}
