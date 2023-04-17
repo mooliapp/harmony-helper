@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { Harmony } from '@harmony-js/core';
 import { ChainID, ChainType } from '@harmony-js/utils';
 
