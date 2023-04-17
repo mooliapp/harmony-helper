@@ -1,6 +1,6 @@
-import { createClient, ChainID, ChainType, getHrc20decimals } from '..';
+import { createClient, ChainID, ChainType, getHrc20decimals } from '../../dist';
 
-describe('(DevTests) Test utility functions', () => {
+describe('(BundleTests) Test utility functions', () => {
     it('Harmony client', () => {
         const client = createClient({
             endpoint: 'https://api.s0.t.hmny.io/',
@@ -22,3 +22,5 @@ describe('(DevTests) Test utility functions', () => {
         expect(decimals3).toEqual('8');
     });
 });
+
+export {};

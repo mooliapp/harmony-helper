@@ -9,7 +9,7 @@
         "forceConsistentCasingInFileNames": true,
         "isolatedModules": true,
         "lib": ["es2020", "dom"],
-        "module": "commonjs",
+        "module": "ES2020",
         "moduleResolution": "node",
         "noEmit": true,
         "noFallthroughCasesInSwitch": true,
@@ -27,5 +27,5 @@
         "useUnknownInCatchVariables": false
     },
     "include": ["**/*.ts"],
-    "exclude": ["./dist/"]
+    "exclude": ["./dist/", "./scripts"]
 }

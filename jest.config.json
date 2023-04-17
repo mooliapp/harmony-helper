@@ -18,6 +18,6 @@
     "testMatch": ["**/**/*.test.ts"],
     "testTimeout": 60000,
     "transform": { "^.+\\.(j|t)sx?$": "ts-jest" },
-    "transformIgnorePatterns": ["<rootDir>/node_modules"],
+    "transformIgnorePatterns": ["<rootDir>/node_modules", "<rootDir>/dist"],
     "verbose": true
 }
