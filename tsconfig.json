@@ -26,6 +26,11 @@
         "target": "es2020",
         "useUnknownInCatchVariables": false
     },
+    "ts-node": {
+        "compilerOptions": {
+            "module": "CommonJS"
+        }
+    },
     "include": ["**/*.ts"],
     "exclude": ["./dist/", "./scripts"]
 }

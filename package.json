@@ -9,7 +9,7 @@
     "private": true,
     "scripts": {
         "reinstall": "./reinstall.sh",
-        "build": "ts-node -O '{\"module\":\"commonjs\"}' scripts/build",
+        "build": "ts-node scripts/build",
         "tsc": "tsc",
         "deduplicate": "yarn yarn-deduplicate -s fewer yarn.lock",
         "test:bundle": "jest --testNamePattern=BundleTests",
