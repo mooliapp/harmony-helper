@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import esBuild from 'esbuild';
 import path from 'path';
 
