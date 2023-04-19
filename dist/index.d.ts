@@ -1,6 +1,4 @@
-import { Harmony } from '@harmony-js/core';
-import { ChainID, ChainType } from '@harmony-js/utils';
-export { ChainID, ChainType };
+import Web3 from 'web3';
 
 /**
  * Create client for Harmony blockchain
@@ -13,14 +11,12 @@ export declare function createClient({
     id,
 }: {
     endpoint: string;
-    type: ChainType;
-    id: ChainID;
-}): Harmony;
+}): Web3;
 
 /**
  * Client for Harmony main net
  */
-export declare const harmonyMain: Harmony;
+export declare const harmonyMain: Web3;
 
 /**
  * Request decimals value for provided HRC20 contract address in Harmony blockchain
@@ -30,5 +26,5 @@ export declare const harmonyMain: Harmony;
  */
 export declare function getHrc20decimals(
     address: string,
-    providedClient?: Harmony,
+    providedClient?: Web3,
 ): Promise<string>;

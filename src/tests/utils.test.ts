@@ -1,14 +1,11 @@
-import { createClient, ChainID, ChainType, getHrc20decimals } from '..';
+import { createClient, getHrc20decimals } from '..';
 
 describe('(DevTests) Test utility functions', () => {
     it('Harmony client', () => {
         const client = createClient({
             endpoint: 'https://api.s0.t.hmny.io/',
-            type: ChainType.Harmony,
-            id: ChainID.HmyMainnet,
         });
         expect(client).toBeDefined();
-        expect(client.getChainId).toEqual(ChainID.HmyMainnet);
     });
 
     it('HRC20 decimals', async () => {
@@ -20,5 +17,11 @@ describe('(DevTests) Test utility functions', () => {
 
         const decimals3 = await getHrc20decimals('0x3095c7557bcb296ccc6e363de01b760ba031f2d9');
         expect(decimals3).toEqual('8');
+
+        const decimals4 = await getHrc20decimals('0x22d62b19b7039333ad773b7185bb61294f3adc19');
+        expect(decimals4).toEqual('18');
+
+        const decimals5 = await getHrc20decimals('0x1449ab6c24dcf3dbc1971021f465af1b81f48f07');
+        expect(decimals5).toEqual('18');
     });
 });

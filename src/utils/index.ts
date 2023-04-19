@@ -1,4 +1,5 @@
-import type { Harmony } from '@harmony-js/core';
+import type Web3 from 'web3';
+import { AbiItem } from 'web3-utils';
 
 import { harmonyMain } from '../client';
 
@@ -8,10 +9,10 @@ import { harmonyMain } from '../client';
  * @param providedClient - Harmony client (optional, use main if not provided)
  * @returns decimals value
  */
-export async function getHrc20decimals(address: string, providedClient?: Harmony): Promise<string> {
+export async function getHrc20decimals(address: string, providedClient?: Web3): Promise<string> {
     const client = providedClient ?? harmonyMain;
 
-    const abi = [
+    const abi: AbiItem[] = [
         {
             constant: true,
             inputs: [],
@@ -23,7 +24,7 @@ export async function getHrc20decimals(address: string, providedClient?: Harmony
         },
     ];
 
-    const contract = client.contracts.createContract(abi, address);
+    const contract = new client.eth.Contract(abi, address);
 
     return contract.methods.decimals().call();
 }

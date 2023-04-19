@@ -1,6 +1,6 @@
 {
     "name": "harmony-helper",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Utility for work with Harmony blockchain",
     "main": "dist/index.js",
     "repository": "git@github.com:mooliapp/harmony-helper.git",
@@ -26,8 +26,6 @@
     },
     "devDependencies": {
         "@babel/eslint-plugin": "^7.19.1",
-        "@harmony-js/core": "^0.1.57",
-        "@harmony-js/utils": "^0.1.56",
         "@types/jest": "^29.5.0",
         "@typescript-eslint/eslint-plugin": "^5.58.0",
         "@typescript-eslint/parser": "^5.58.0",
@@ -44,6 +42,8 @@
         "ts-jest": "^29.1.0",
         "ts-node": "^10.9.1",
         "typescript": "^5.0.4",
+        "web3": "^1.9.0",
+        "web3-utils": "^1.9.0",
         "yarn-deduplicate": "^6.0.1"
     }
 }
